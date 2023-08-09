@@ -66,19 +66,20 @@ then echo "Задание выполнено успешно"
 else echo "Провал"
 exit
 fi
-sleep 6
+echo "ШАГ 8 - удалить результаты скрипта через 15 с."
+sleep 15
 find .. -name '*file*' -exec rm -Rf {} \;
 exit
 
 
 РЕЗУЛЬТАТ:
-$ ./myscript1.sh
+$ ./myscript.sh
 Мой первый скрипт
 ШАГ 1 - зайти в папку (f3)
 ШАГ 2 - создать 3 папки
 file1  file2  file3  hig.txt  tam.txt
 ШАГ 3 - зайти в любую папку (file3)
-/d/КурсVadKs/Terminal/p1/p1.2/f3/file3
+/d/КурсVadKs/Terminal_pract/p1/p1.2/f3/file3
 ШАГ 4 - создать 5 файлов (3 txt, 2 json)
 1.txt  2.txt  3.txt  user1.json  user2.json
 ШАГ 5 - создать 3 папки
@@ -87,10 +88,8 @@ file1  file2  file3  hig.txt  tam.txt
 ШАГ 7 - переместить любые 2 файла в любую другую папку
 ./pap2/2.txt
 Задание выполнено успешно
+ШАГ 8 - удалить результаты скрипта через 15 с.
 find: ‘../file1’: No such file or directory
 find: ‘../file2’: No such file or directory
 find: ‘../file3’: No such file or directory
 find: Failed to restore initial working directory: No such file or directory
-
-
-
